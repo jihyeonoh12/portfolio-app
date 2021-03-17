@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter , Route , Switch } from 'react-router-dom'
 import './App.css';
 import Home from './pages/Home'
 import About from './pages/About'
@@ -10,7 +11,7 @@ import PostProteinPlus from './pages/PostProteinPlus'
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter basename={"window.location.pathname || ''"}>
+      <HashRouter>
       <div className="App">
           <Switch>
            <Route path="/" component={Home} exact/>
@@ -18,12 +19,11 @@ class App extends React.Component {
            <Route path="/digital-design" component={About}/>
            <Route path="/print-design" component={About}/>
            <Route path="/coding" component={About}/>
-
            <Route path="/post-protein-plus" component={PostProteinPlus}/>
           <Route component={Error}/>
          </Switch>
       </div> 
-    </BrowserRouter>
+    </HashRouter>
 
   )
  }
