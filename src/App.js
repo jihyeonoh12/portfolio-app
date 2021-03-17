@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter basename={window.location.pathname || ''}>
-      <div>
+      <div className="App">
           <Switch>
            <Route path="/" component={Home} exact/>
            <Route path="/about" component={About}/>
