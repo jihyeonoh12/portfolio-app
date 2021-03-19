@@ -1,6 +1,5 @@
 import React from 'react'
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { HashRouter , Route , Switch } from 'react-router-dom'
+import { Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from './pages/Home'
 import About from './pages/About'
@@ -11,9 +10,8 @@ import PostProteinPlus from './pages/PostProteinPlus'
 class App extends React.Component {
   render() {
     return (
-      <HashRouter>
       <div className="App">
-          <Switch>
+      <Switch>
            <Route path="/" component={Home} exact/>
            <Route path="/about" component={About}/>
            <Route path="/digital-design" component={About}/>
@@ -21,9 +19,8 @@ class App extends React.Component {
            <Route path="/coding" component={About}/>
            <Route path="/post-protein-plus" component={PostProteinPlus}/>
           <Route component={Error}/>
-         </Switch>
+        </Switch>
       </div> 
-    </HashRouter>
 
   )
  }
